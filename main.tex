@@ -1,0 +1,67 @@
+\documentclass[11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+
+\title{Paper Title}
+\author{Author Name\\
+  \small Institution\\
+  \small \texttt{author@example.com}}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Write a concise summary of the paper: its purpose, approach, main results, and
+conclusions.
+\end{abstract}
+
+\noindent\textbf{Keywords:} keyword one, keyword two, keyword three
+
+\section{Introduction}
+Introduce the topic, explain its significance, and state the research question
+or objective. Summarize relevant prior work and cite it with
+\verb|\cite{example}|.
+
+\section{Methods}
+Describe the materials, data, and methods used so that the work can be
+understood and reproduced. For example, an equation can be written as
+\begin{equation}
+  y = mx + b.
+\end{equation}
+
+\section{Results}
+Present the findings clearly. Tables can be formatted with \texttt{booktabs}:
+\begin{table}[ht]
+  \centering
+  \caption{Example results table. Replace the sample values with your data.}
+  \label{tab:example}
+  \begin{tabular}{lc}
+    \toprule
+    Measure & Value \\
+    \midrule
+    Example measure & 0.0 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\section{Discussion}
+Interpret the results, relate them to prior work, and discuss limitations.
+
+\section{Conclusion}
+Summarize the main findings and their implications. Note possible directions
+for future work.
+
+\begin{thebibliography}{9}
+\bibitem{example}
+A. Author, ``Title of the cited work,'' Publication, year.
+\end{thebibliography}
+
+\end{document}
