@@ -175,15 +175,16 @@ closing words.
 
 %%\section*{Index}
 % load and print  the index:
+\phantomsection
+\addcontentsline{toc}{section}{Index}
 \printindex
-\addcontentsline{}{section}{Index}
 
 
-
-\bibliography{doc}{}
 %%\bibliographystyle{amsplain}
 \bibliographystyle{plain}
-\addcontentsline{}{section}{References}
+\phantomsection
+\addcontentsline{toc}{section}{References}
+\bibliography{doc}{}
 
 
 \end{document}
