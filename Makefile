@@ -89,6 +89,7 @@ info.sources:
 	@echo    tex source: $(TEX_SOURCE)
 	@echo    bib source: $(BIB_SOURCE)
 	@echo     mk source: $(MK_SOURCE)
+	@echo    cmi source: $(MK_CMI_SOURCE)
 	@echo     md source: $(MD_SOURCE)
 	@echo     li source: $(LI_SOURCE)
 
