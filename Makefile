@@ -6,7 +6,6 @@ SHELL=/bin/sh
 CHECKMAKE_VERSION := v0.3.2
 ACTIONLINT_VERSION := v1.7.12
 MARKDOWNLINT_IMAGE_VERSION := v0.22.0
-BLACK_VERSION := 26.5.1
 CHECKMAKE := go run github.com/checkmake/checkmake/cmd/checkmake@$(CHECKMAKE_VERSION)
 ACTIONLINT := go run github.com/rhysd/actionlint/cmd/actionlint@$(ACTIONLINT_VERSION)
 
@@ -36,12 +35,7 @@ MARKDOWNLINT := $(CONTAINER_CMD) run --rm -v $$PWD:/workdir --user $$(id -u):$$(
 MARKDOWNLINT_REQUIREMENTS := check.container.runtime
 endif
 
-LOCAL_BLACK := $(shell command -v black 2>/dev/null)
-ifneq ($(LOCAL_BLACK),)
-BLACK := $(LOCAL_BLACK)
 else
-BLACK := $(CONTAINER_CMD) run --rm --volume $$PWD:/src --user $$(id -u):$$(id -g) --workdir /src pyfound/black:$(BLACK_VERSION) black
-BLACK_REQUIREMENTS := check.container.runtime
 endif
 
 
