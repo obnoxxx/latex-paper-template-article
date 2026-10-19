@@ -35,12 +35,6 @@ MARKDOWNLINT := $(CONTAINER_CMD) run --rm -v $$PWD:/workdir --user $$(id -u):$$(
 MARKDOWNLINT_REQUIREMENTS := check.container.runtime
 endif
 
-else
-endif
-
-
-
-
 .SUFFIXES: .md .tex .pdf
 
 BASE=doc
